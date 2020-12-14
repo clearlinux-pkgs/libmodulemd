@@ -4,7 +4,7 @@
 #
 Name     : libmodulemd
 Version  : 2.9.2
-Release  : 21
+Release  : 22
 URL      : https://github.com/fedora-modularity/libmodulemd/releases/download/libmodulemd-2.9.2/modulemd-2.9.2.tar.xz
 Source0  : https://github.com/fedora-modularity/libmodulemd/releases/download/libmodulemd-2.9.2/modulemd-2.9.2.tar.xz
 Summary  : No detailed summary available
