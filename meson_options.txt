@@ -8,9 +8,11 @@
 # This program is free software.
 # For more information on the license, see COPYING.
 # For more information on free software, see <https://www.gnu.org/philosophy/free-sw.en.html>.
+#
+# REMEMBER TO UPDATE THE SUMMARY() IN meson.build when adding options here
 
-option('developer_build', type : 'boolean', value : true,
-       description : 'Enables automatic code formatters and memory leak checks. This option should be set to FALSE for release builds.')
+option('verbose_tests', type : 'boolean', value : true,
+       description : 'Tests that are run under the "debug" configuration will print all debug messages. Disable this option for valgrind checks, as it speeds it up substantially.')
 
 option('libmagic', type : 'feature', value : 'enabled',
        description : 'Enables the use of libmagic to detect compression of YAML files.')
@@ -21,14 +23,8 @@ option('python_name', type : 'string',
 option('rpmio', type : 'feature', value : 'enabled',
        description : 'Use the rpmio library to automatically decompress gzip, bzip2 and xz YAML streams.')
 
-option('skip_formatters', type : 'boolean', value : false,
-       description : 'Do not do any automatic formatting of source code.')
-
 option('skip_introspection', type : 'boolean', value : false,
        description : 'Do not generate GObject Introspection data.')
-
-option('test_dirty_git', type : 'boolean', value : false,
-       description : 'Check whether the automatic formatting tools have made changes. Used during CI to verify coding style compliance.')
 
 option('test_installed_lib', type : 'boolean', value : false,
        description : 'Build only the test suite and run it against a copy of libmodulemd installed on the local system.')
@@ -41,3 +37,12 @@ option('with_manpages', type : 'feature', value : 'auto',
 
 option('with_py2', type : 'boolean', value : false,
        description : 'Build Python 2 language bindings and run Python 2 tests.')
+
+option('with_py3', type : 'boolean', value : true,
+       description : 'Build Python 3 language bindings and run Python 3 tests.')
+
+option('gobject_overrides_dir_py2', type : 'string',
+       description : 'Path to Python 2 PyGObject overrides directory. Leave empty to determine it automatically.')
+
+option('gobject_overrides_dir_py3', type : 'string',
+       description : 'Path to Python 3 PyGObject overrides directory. Leave empty to determine it automatically.')

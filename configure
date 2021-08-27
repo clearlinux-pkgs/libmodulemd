@@ -1,4 +1,2 @@
--Ddeveloper_build=false
--Dskip_formatters=true
 -Dwith_docs=false
 -Dwith_manpages=enabled
