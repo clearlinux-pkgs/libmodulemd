@@ -6,7 +6,7 @@
 #
 Name     : libmodulemd
 Version  : 2.13.0
-Release  : 34
+Release  : 35
 URL      : https://github.com/fedora-modularity/libmodulemd/releases/download/2.13.0/modulemd-2.13.0.tar.xz
 Source0  : https://github.com/fedora-modularity/libmodulemd/releases/download/2.13.0/modulemd-2.13.0.tar.xz
 Source1  : https://github.com/fedora-modularity/libmodulemd/releases/download/2.13.0/modulemd-2.13.0.tar.xz.asc
@@ -122,7 +122,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1631765121
+export SOURCE_DATE_EPOCH=1635748664
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -137,7 +137,7 @@ export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-meson test -C builddir
+meson test -C builddir --print-errorlogs
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/libmodulemd
