@@ -184,6 +184,7 @@ libmodulemd.so.2:modulemd_load_string
 libmodulemd.so.2:modulemd_module_add_obsoletes
 libmodulemd.so.2:modulemd_module_add_stream
 libmodulemd.so.2:modulemd_module_add_translation
+libmodulemd.so.2:modulemd_module_clear_xmds
 libmodulemd.so.2:modulemd_module_copy
 libmodulemd.so.2:modulemd_module_get_all_streams
 libmodulemd.so.2:modulemd_module_get_defaults
@@ -201,6 +202,7 @@ libmodulemd.so.2:modulemd_module_index_add_defaults
 libmodulemd.so.2:modulemd_module_index_add_module_stream
 libmodulemd.so.2:modulemd_module_index_add_obsoletes
 libmodulemd.so.2:modulemd_module_index_add_translation
+libmodulemd.so.2:modulemd_module_index_clear_xmds
 libmodulemd.so.2:modulemd_module_index_dump_to_custom
 libmodulemd.so.2:modulemd_module_index_dump_to_stream
 libmodulemd.so.2:modulemd_module_index_dump_to_string
@@ -364,6 +366,7 @@ libmodulemd.so.2:modulemd_module_stream_v2_clear_rpm_artifacts
 libmodulemd.so.2:modulemd_module_stream_v2_clear_rpm_components
 libmodulemd.so.2:modulemd_module_stream_v2_clear_rpm_filters
 libmodulemd.so.2:modulemd_module_stream_v2_clear_servicelevels
+libmodulemd.so.2:modulemd_module_stream_v2_clear_xmd
 libmodulemd.so.2:modulemd_module_stream_v2_emit_rpm_map
 libmodulemd.so.2:modulemd_module_stream_v2_emit_yaml
 libmodulemd.so.2:modulemd_module_stream_v2_get_arch

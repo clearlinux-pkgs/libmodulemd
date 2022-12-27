@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x4FD1AEC3365AF7BF (ppisar@redhat.com)
 #
 Name     : libmodulemd
-Version  : 2.13.0
-Release  : 39
-URL      : https://github.com/fedora-modularity/libmodulemd/releases/download/2.13.0/modulemd-2.13.0.tar.xz
-Source0  : https://github.com/fedora-modularity/libmodulemd/releases/download/2.13.0/modulemd-2.13.0.tar.xz
-Source1  : https://github.com/fedora-modularity/libmodulemd/releases/download/2.13.0/modulemd-2.13.0.tar.xz.asc
+Version  : 2.14.0
+Release  : 40
+URL      : https://github.com/fedora-modularity/libmodulemd/releases/download/2.14.0/modulemd-2.14.0.tar.xz
+Source0  : https://github.com/fedora-modularity/libmodulemd/releases/download/2.14.0/modulemd-2.14.0.tar.xz
+Source1  : https://github.com/fedora-modularity/libmodulemd/releases/download/2.14.0/modulemd-2.14.0.tar.xz.asc
 Summary  : Module metadata manipulation library
 Group    : Development/Tools
 License  : MIT
@@ -114,15 +114,15 @@ python3 components for the libmodulemd package.
 
 
 %prep
-%setup -q -n modulemd-2.13.0
-cd %{_builddir}/modulemd-2.13.0
+%setup -q -n modulemd-2.14.0
+cd %{_builddir}/modulemd-2.14.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1666733691
+export SOURCE_DATE_EPOCH=1672180099
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -141,7 +141,7 @@ meson test -C builddir --print-errorlogs
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/libmodulemd
-cp %{_builddir}/modulemd-%{version}/COPYING %{buildroot}/usr/share/package-licenses/libmodulemd/df8b6951986b90ed530a771fd3419725f7eaa4fb || :
+cp %{_builddir}/modulemd-%{version}/COPYING %{buildroot}/usr/share/package-licenses/libmodulemd/df8b6951986b90ed530a771fd3419725f7eaa4fb
 DESTDIR=%{buildroot} ninja -C builddir install
 
 %files
@@ -190,7 +190,7 @@ DESTDIR=%{buildroot} ninja -C builddir install
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libmodulemd.so.2
-/usr/lib64/libmodulemd.so.2.13.0
+/usr/lib64/libmodulemd.so.2.14.0
 
 %files license
 %defattr(0644,root,root,0755)
