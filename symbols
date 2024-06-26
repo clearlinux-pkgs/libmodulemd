@@ -6,6 +6,7 @@ libmodulemd.so.2:mmd_emitter_end_mapping
 libmodulemd.so.2:mmd_emitter_end_sequence
 libmodulemd.so.2:mmd_emitter_end_stream
 libmodulemd.so.2:mmd_emitter_scalar
+libmodulemd.so.2:mmd_emitter_scalar_string
 libmodulemd.so.2:mmd_emitter_start_document
 libmodulemd.so.2:mmd_emitter_start_mapping
 libmodulemd.so.2:mmd_emitter_start_sequence
